@@ -3,6 +3,56 @@ import Image from 'next/image'
 import { MotionViewport, varFade } from './animate'
 import { m } from 'framer-motion'
 
+const aws_capabilities = [
+  {
+    id: 0,
+    title: 'Pay as you go',
+    desc: 'รองรับการใช้งานแบบ Pay as you go จ่ายเท่าที่ใช้',
+    icon: '/images/capability-0.svg',
+  },
+  {
+    id: 1,
+    title: 'Availability Zone',
+    desc: 'มีการกระจายเก็บข้อมูล ไว้หลาย Availability Zone เพื่อความสเถียรภาพ',
+    icon: '/images/capability-1.svg',
+  },
+  {
+    id: 2,
+    title: ' SLA',
+    desc: 'รองรับ SLA 99.99%',
+    icon: '/images/capability-2.svg',
+  },
+  {
+    id: 3,
+    title: 'Scalability',
+    desc: 'รองรับการเข้าถึงได้รวดเร็วจากทั่วทุกมุมโลก',
+    icon: '/images/capability-3.svg',
+  },
+  {
+    id: 4,
+    title: 'Encryption ',
+    desc: 'หมดกังวลเรื่องของข้อมูลจะถูกเข้าถึงจากบุคคลภายนอกเพราะมีการเข้ารหัสตั้งแต่ต้นทาง (Encryption)',
+    icon: '/images/capability-4.svg',
+  },
+  {
+    id: 5,
+    title: 'Data Security',
+    desc: 'มีความสามารถในการป้องกันการเข้าถึงที่ไม่พึงประสงค์ทั้งเชิงรุกและรับ',
+    icon: '/images/capability-5.svg',
+  },
+  {
+    id: 6,
+    title: 'Marketplace',
+    desc: 'มี Marketplace ที่ช่วยให้ติดตั้ง Software ที่ต้องการได้อย่างง่ายดาย',
+    icon: '/images/capability-6.svg',
+  },
+  {
+    id: 7,
+    title: ' Global',
+    desc: 'ผ่านการรับรองมาตรฐานสากลต่างๆทั่วโลก',
+    icon: '/images/capability-7.svg',
+  },
+]
 export default function Home() {
   return (
     <main className='overflow-hidden'>
@@ -20,7 +70,7 @@ export default function Home() {
               priority
             />
 
-            <h1 className='animate-text --font-pt_san font-bold text-4xl lg:text-6xl text-transparent  bg-clip-text bg-gradient-to-r from-dodger-500 via-cornflower-500 to-sky-500'>
+            <h1 className='animate-text font-bold text-4xl lg:text-6xl text-transparent  bg-clip-text bg-gradient-to-r from-dodger-500 via-cornflower-500 to-sky-500'>
               AWS Services
             </h1>
             <p className='lg:text-lg max-w-[500px] mt-4'>
@@ -76,51 +126,157 @@ export default function Home() {
             />
           </m.div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-4 justify-center '>
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+            {aws_capabilities.map((item) => (
               <m.div
-                key={item}
+                key={item.id}
                 variants={varFade().in}
-                className='flex flex-col gap-y-6'
+                className='flex flex-col gap-y-6 max-w-[178px] mx-auto'
               >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='49'
-                  height='48'
-                  viewBox='0 0 49 48'
-                  fill='none'
-                >
-                  <g clip-path='url(#clip0_4_309)'>
-                    <path
-                      d='M26.162 19.651C26.902 19.877 27.687 20 28.5 20C32.918 20 36.5 16.418 36.5 12C36.5 7.582 32.918 4 28.5 4C26.288 4 24.286 4.898 22.838 6.349C22.098 6.123 21.314 6 20.5 6C16.082 6 12.5 9.582 12.5 14C12.5 18.418 16.082 22 20.5 22C22.712 22 24.714 21.102 26.162 19.651ZM28.5 8C30.706 8 32.5 9.794 32.5 12C32.5 14.206 30.706 16 28.5 16C26.294 16 24.5 14.206 24.5 12C24.5 9.794 26.295 8 28.5 8ZM16.5 14C16.5 11.794 18.294 10 20.5 10C20.588 10 20.669 10.02 20.756 10.026C20.595 10.658 20.5 11.317 20.5 12C20.5 14.079 21.3 15.967 22.6 17.389C21.988 17.77 21.273 18 20.5 18C18.295 18 16.5 16.206 16.5 14Z'
-                      fill='white'
-                    />
-                    <path
-                      d='M30.5 24C24.548 24 19.687 25.913 17.6 28.777C16.55 27.863 15.738 26.964 15.3 26.398C13.314 23.755 9.54598 23.217 6.89998 25.2C4.25398 27.184 3.71498 30.953 5.70098 33.6C6.01898 34.025 13.631 44 24.5 44H44.5V32C44.5 27.439 38.481 24 30.5 24ZM8.89998 31.2C8.23798 30.318 8.41798 29.061 9.29698 28.4C9.65698 28.13 10.08 28.001 10.498 28.001C11.106 28.001 11.705 28.275 12.094 28.792C12.147 28.864 17.526 36 24.5 36H32.5V34V32H24.5C23.271 32 22.04 31.615 20.89 31.038C22.018 29.573 25.525 28 30.5 28C36.604 28 40.5 30.369 40.5 32V40H38.5H24.5C15.607 40 9.16898 31.559 8.89998 31.2Z'
-                      fill='white'
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id='clip0_4_309'>
-                      <rect
-                        width='48'
-                        height='48'
-                        fill='white'
-                        transform='translate(0.5)'
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-                <p className='text-sky-400 text-lg lg:text-2xl font-medium'>
-                  Pay as you go{' '}
+                <Image
+                  src={item.icon}
+                  alt={item.icon}
+                  width={48}
+                  height={48}
+                  priority
+                  className='h-8 w-8 lg:h-12 lg:w-12'
+                />
+                <p className='text-sky-400 text-lg lg:text-2xl font-medium whitespace-nowrap'>
+                  {item.title}
                 </p>
                 <p className='max-w-[178px] text-sm lg:text-base'>
-                  รองรับการใช้งานแบบ Pay as you go จ่ายเท่าที่ใช้
+                  {item.desc}
                 </p>
               </m.div>
             ))}
           </div>
         </div>
       </MotionViewport>
+      <div className='bg-white w-full'>
+        <div className='px-6 lg:px-10 py-20 max-w-7xl  mx-auto'>
+          <MotionViewport>
+            <m.div
+              variants={varFade().in}
+              className='flex flex-col gap-y-8 pb-10'
+            >
+              <div className='flex  flex-col items-center justify-center gap-y-6'>
+                <p className='animate-text  text-transparent text-center  bg-clip-text bg-gradient-to-r from-dodger-500 via-cornflower-500 to-sky-500 text-2xl lg:text-4xl font-semibold'>
+                  ทำไมถึงต้องเป็น
+                </p>
+                <Image
+                  src='/logo.png'
+                  alt='logo'
+                  width={120}
+                  height={48}
+                  priority
+                  className='mx-auto'
+                />
+                <p className=' text-sm lg:text-base max-w-[500px] text-center'>
+                  <span className='text-cornflower-500 font-medium'>
+                    Vulture Prime
+                  </span>{' '}
+                  พร้อมที่จะช่วยออกแบบ ให้คำปรึกษาและวางแผน Solution
+                  ที่เหมาะกับการใช้งานขององค์กรคุณ
+                </p>
+              </div>
+            </m.div>
+          </MotionViewport>
+          <MotionViewport>
+            <m.div
+              variants={varFade().in}
+              className='grid sm:grid-cols-2 gap-x-16 gap-y-8 mt-10'
+            >
+              <Image
+                src='/images/expert.png'
+                alt='expert'
+                width={380}
+                height={320}
+                priority
+                className='mx-auto lg:mr-0   rounded-2xl  object-cover object-center'
+              />
+              <div className='flex flex-col gap-y-6 justify-center'>
+                <p className='text-cornflower-700 text-4xl font-semibold'>
+                  Expert
+                </p>
+                <p className='max-w-[396px]'>
+                  Expert เราคือผู้ให้บริการ AWS ในไทย
+                  ที่มีผู้เชี่ยวชาญในการออกแบบวางระบบและให้คำปรึกษาการจัดการคลาวด์
+                  AWS เช่น บริการ{' '}
+                  <span className='text-cornflower-500 font-medium'>
+                    EC2, ELB, S3, VPC
+                  </span>{' '}
+                  และ{' '}
+                  <span className='text-cornflower-500 font-medium'>
+                    Beanstalk
+                  </span>{' '}
+                  รวมถึงการใช้งานแบบ Multi Cloud
+                </p>
+              </div>
+            </m.div>
+          </MotionViewport>
+          <MotionViewport>
+            <m.div
+              variants={varFade().in}
+              className='grid   sm:grid-cols-2 gap-x-16 gap-y-8 mt-10'
+            >
+              <div className='order-2 sm:order-1 lg:ml-auto lg:mr-0 flex flex-col gap-y-6 justify-center'>
+                <p className='text-cornflower-700 text-4xl font-semibold'>
+                  One Stop Service
+                </p>
+                <p className='max-w-[396px]'>
+                  เราสามารถให้บริการครบจบที่เดียว ในการให้คำปรึกษาและวางแผน
+                  ติดตั้งและดูแลระบบ AWS คลาวด์ แพลตฟอร์ม และ AWS โฮสติ้งทั้ง{' '}
+                  <span className='text-cornflower-500 font-medium'>
+                    Infrastructure as a Service
+                  </span>{' '}
+                  และ{' '}
+                  <span className='text-cornflower-500 font-medium'>
+                    Serverless
+                  </span>{' '}
+                  ให้คำปรึกษาการการทำ
+                </p>
+              </div>
+              <Image
+                src='/images/onestop.png'
+                alt='onestop'
+                width={380}
+                height={320}
+                priority
+                className='order-1 sm:order-2 rounded-2xl  object-cover object-center'
+              />
+            </m.div>
+          </MotionViewport>
+          <MotionViewport>
+            <m.div
+              variants={varFade().in}
+              className='grid sm:grid-cols-2 gap-x-16 gap-y-8 mt-10'
+            >
+              <Image
+                src='/images/finops.png'
+                alt='finops'
+                width={380}
+                height={320}
+                priority
+                className='mx-auto lg:mr-0   rounded-2xl  object-cover object-center'
+              />
+              <div className='flex flex-col gap-y-6 justify-center'>
+                <p className='text-cornflower-700 text-4xl font-semibold'>
+                  FinOps
+                </p>
+                <p className='max-w-[396px]'>
+                  ให้คำปรึกษาการการทำ{' '}
+                  <span className='text-cornflower-500 font-medium'>
+                    Cost Optimization
+                  </span>{' '}
+                  เพื่อให้ใช้งาน AWS อย่างคุ้มค่าและเต็มประสิทธิภาพมากที่สุด
+                </p>
+              </div>
+            </m.div>
+          </MotionViewport>
+          <MotionViewport>
+            <p>Key Features</p>
+          </MotionViewport>
+        </div>
+      </div>
     </main>
   )
 }
