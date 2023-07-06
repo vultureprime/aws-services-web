@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge'
 import './globals.css'
 import { Inter, Prompt } from 'next/font/google'
+import MotionLazyContainer from './animate/MotionLazyContainer'
 
 const prompt = Prompt({
   subsets: ['latin', 'thai'],
@@ -21,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={twMerge(prompt.className)}>{children}</body>
+      <body className={twMerge(prompt.className)}>
+        <MotionLazyContainer>{children}</MotionLazyContainer>
+      </body>
     </html>
   )
 }
