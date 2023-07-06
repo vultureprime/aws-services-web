@@ -1,7 +1,13 @@
+import { twMerge } from 'tailwind-merge'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Prompt } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const prompt = Prompt({
+  subsets: ['latin', 'thai'],
+  variable: '--font-pt_san',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang='en'>
+      <body className={twMerge(prompt.className)}>{children}</body>
     </html>
   )
 }
