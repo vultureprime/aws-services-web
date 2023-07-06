@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         cloud: 'url("/images/bg-cloud.png")',
+        plant: 'url("/images/bg-plant.png")',
       },
       colors: {
         sky: {

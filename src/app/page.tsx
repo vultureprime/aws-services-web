@@ -53,6 +53,18 @@ const aws_capabilities = [
     icon: '/images/capability-7.svg',
   },
 ]
+const key_feature = [
+  { id: 0, title: 'Configuration Services', icon: '/images/key1.svg' },
+  { id: 1, title: 'Monitoring and Alerting', icon: '/images/key2.svg' },
+  {
+    id: 2,
+    title: 'Migration / Development Services',
+    icon: '/images/key3.svg',
+  },
+  { id: 3, title: 'Solution Architecture', icon: '/images/key4.svg' },
+  { id: 4, title: 'Account Review ', icon: '/images/key5.svg' },
+  { id: 5, title: 'FinOps', icon: '/images/key6.svg' },
+]
 export default function Home() {
   return (
     <main className='overflow-hidden'>
@@ -272,8 +284,109 @@ export default function Home() {
               </div>
             </m.div>
           </MotionViewport>
-          <MotionViewport>
-            <p>Key Features</p>
+          <MotionViewport className='mt-20'>
+            <p className='text-2xl font-semibold text-cornflower-800'>
+              Key Features
+            </p>
+            <div className='mt-10 grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'>
+              {key_feature.map((item) => (
+                <m.div
+                  key={item.id}
+                  variants={varFade().in}
+                  className='w-[180px] mx-auto flex flex-col items-center gap-y-3 bg-sky-400 text-white p-4 rounded-xl'
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.icon}
+                    width={48}
+                    height={48}
+                    priority
+                    className='h-8 w-8 lg:h-12 lg:w-12'
+                  />
+                  <p className=' text-sm lg:text-lg font-medium text-center'>
+                    {item.title}
+                  </p>
+                </m.div>
+              ))}
+            </div>
+          </MotionViewport>
+        </div>
+      </div>
+      <div className='bg-plant bg-cover w-full h-fit'>
+        <div className='px-6 lg:px-10 py-20 max-w-7xl  mx-auto'>
+          <MotionViewport
+            variants={varFade().in}
+            className='flex flex-col lg:flex-row gap-y-4 lg:items-center lg:justify-between'
+          >
+            <p className='animate-text  text-transparent   bg-clip-text bg-gradient-to-r from-dodger-500 via-cornflower-500 to-sky-500 text-2xl lg:text-4xl font-semibold'>
+              Trust us,
+              <br /> Empower Your Success.
+            </p>
+            <p className=' text-sm lg:text-base max-w-[420px] text-start'>
+              <span className='text-cornflower-500 font-medium'>
+                Vulture Prime
+              </span>{' '}
+              เราพร้อมที่จะเป็น Partner ของคุณ
+              ทีมผู้เชี่ยวชาญของเราพร้อมที่จะแนะนำและช่วยคุณในการตัดสินใจเลือกบริการคลาวด์ที่เหมาะสมสำหรับธุรกิจของคุณ
+            </p>
+          </MotionViewport>
+          <MotionViewport
+            variants={varFade().in}
+            className='mt-20 flex flex-col items-center gap-y-8 justify-between'
+          >
+            <p className='text-center text-cornflower-800 text-2xl lg:text-4xl font-semibold'>
+              AWS Certifications
+            </p>
+            <div className='mt-8 flex flex-wrap items-center justify-center gap-8'>
+              <Image
+                src='/images/cer-1.png'
+                alt='cer-1'
+                width={206}
+                height={284}
+                priority
+              />
+              <Image
+                src='/images/cer-2.png'
+                alt='cer-2'
+                width={206}
+                height={284}
+                priority
+              />
+              <Image
+                src='/images/cer-3.png'
+                alt='cer-3'
+                width={206}
+                height={284}
+                priority
+              />
+            </div>
+          </MotionViewport>
+          <MotionViewport
+            variants={varFade().in}
+            className='mt-40 flex flex-col items-center gap-y-8 justify-between'
+          >
+            <p className='text-center text-cornflower-800 text-2xl lg:text-4xl font-semibold'>
+              FinOps Certification
+            </p>
+            <div className='flex   items-center justify-center gap-x-2'>
+              by{' '}
+              <Image
+                src='/images/linux.png'
+                alt='linux'
+                width={128}
+                height={41}
+                priority
+              />
+            </div>
+            <div className='mt-8 flex items-center justify-center gap-8'>
+              <Image
+                src='/images/cer-4.png'
+                alt='cer-4'
+                width={206}
+                height={284}
+                priority
+              />
+            </div>
           </MotionViewport>
         </div>
       </div>
