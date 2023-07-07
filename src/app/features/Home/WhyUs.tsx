@@ -147,7 +147,7 @@ export default function WhyUs() {
               <m.div
                 key={item.id}
                 variants={varFade().in}
-                className='w-[160px] h-[140px] mx-auto flex flex-col items-center gap-y-3 bg-sky-400 text-white p-4 rounded-xl'
+                className='w-[160px] h-[180px] mx-auto flex flex-col items-center gap-y-3 bg-sky-400 text-white p-4 rounded-xl'
               >
                 <Image
                   src={item.icon}

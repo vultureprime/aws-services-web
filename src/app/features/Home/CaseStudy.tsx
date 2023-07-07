@@ -32,7 +32,7 @@ export default function Home() {
     },
   ]
   return (
-    <div className='px-6 lg:px-10 py-20 max-w-7xl  mx-auto'>
+    <div id='case-study' className='px-6 lg:px-10 py-20 max-w-7xl  mx-auto'>
       <MotionViewport>
         <m.div variants={varFade().in} className='flex flex-col gap-y-8 pb-10'>
           <div className='flex  flex-col items-center justify-center gap-y-6'>
