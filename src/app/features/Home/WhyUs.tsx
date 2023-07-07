@@ -142,12 +142,12 @@ export default function WhyUs() {
           <p className='text-2xl font-semibold text-cornflower-800'>
             Key Features
           </p>
-          <div className='mt-10 grid gap-x-8 grid-cols-2  gap-y-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6'>
+          <div className='mt-10 grid gap-4 lg:gap-8  grid-cols-2   sm:grid-cols-4 lg:grid-cols-6'>
             {key_feature.map((item) => (
               <m.div
                 key={item.id}
                 variants={varFade().in}
-                className='w-[160px] h-[180px] mx-auto flex flex-col items-center gap-y-3 bg-sky-400 text-white p-4 rounded-xl'
+                className='w-full h-[180px] mx-auto flex flex-col justify-center items-center gap-y-3 bg-sky-400 text-white p-4 rounded-xl'
               >
                 <Image
                   src={item.icon}
