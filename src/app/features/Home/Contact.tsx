@@ -15,7 +15,7 @@ export default function Contact() {
             <p className='text-xs mt-6 text-center sm:text-start max-w-[320px] sm:max-w-none mx-auto lg:mx-none '>
               พร้อมให้คำแนะนำและคำปรึกษาจากผู้เชี่ยวชาญ
               <br />
-              เพื่อช่วยให้คุณเริ่มต้นหรือพัฒนาโครงการ AWS Cloud
+              เพื่อช่วยให้คุณเริ่มต้นหรือพัฒนาโปรเจกต์ AWS Cloud
               ให้เป็นไปได้อย่างมีประสิทธิภาพที่สุด
             </p>
             <div className='flex-row mt-6 justify-center lg:justify-start'>
