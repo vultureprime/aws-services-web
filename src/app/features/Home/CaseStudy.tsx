@@ -8,7 +8,7 @@ export default function Home() {
   const caseStudy = [
     {
       title: 'ImageXYZ',
-      tool: 'EC2 • S3 • NextJs • Python',
+      tool: 'EC2 • S3',
       blog: 'https://www.vultureprime.com/blogs/imagexyz-tech-stack',
       website: 'https://imagexyz.vultureprime.com/',
       img: '/images/case-1.png',
@@ -16,7 +16,7 @@ export default function Home() {
     },
     {
       title: 'LaiTa ',
-      tool: 'EC2 • S3 • NextJs • Python',
+      tool: 'EC2 • S3',
       blog: 'https://www.vultureprime.com/blogs/laita-the-series',
       website: 'https://laita.co/',
       img: '/images/case-2.png',
@@ -24,7 +24,7 @@ export default function Home() {
     },
     {
       title: 'OgXYZ',
-      tool: 'EC2 • S3 • NextJs • Nodejs',
+      tool: 'EC2 • S3',
       blog: 'https://www.vultureprime.com/blogs/ogxyz-the-series',
       website: 'https://ogxyz.vultureprime.com/',
       img: '/images/case-3.png',
@@ -84,39 +84,41 @@ export default function Home() {
                   {item.title}
                 </p>
                 <p className='text-xs text-sky-700 line-clamp-2'>{item.desc}</p>
-                <div className='flex items-center gap-x-2 mt-4'>
-                  <Link
-                    className='hover:scale-110 transition-all duration-300 flex gap-x-2 text-sm items-center text-cornflower-800'
-                    href={item.website}
-                    title={item.title}
-                  >
-                    <Image
-                      src='/images/website.svg'
-                      alt='web-1'
-                      width={20}
-                      height={20}
-                      sizes='100vw'
-                      priority
-                    />
-                    <p>ลองเล่นเลย</p>
-                  </Link>
-                </div>
-                <div className='flex items-center gap-x-2 mt-4'>
-                  <Link
-                    className='hover:scale-110 transition-all duration-300 flex gap-x-2 text-sm items-center text-cornflower-800'
-                    href={item.blog}
-                    title={item.title}
-                  >
-                    <Image
-                      src='/images/content.svg'
-                      alt='content-1'
-                      width={20}
-                      height={20}
-                      sizes='100vw'
-                      priority
-                    />
-                    <p>อ่านบทความ</p>
-                  </Link>
+                <div className='flex items-center gap-x-4'>
+                  <div className='flex items-center gap-x-2 mt-4'>
+                    <Link
+                      className='hover:scale-110 transition-all duration-300 flex gap-x-2 text-sm items-center text-cornflower-800'
+                      href={item.blog}
+                      title={item.title}
+                    >
+                      <Image
+                        src='/images/content.svg'
+                        alt='content-1'
+                        width={20}
+                        height={20}
+                        sizes='100vw'
+                        priority
+                      />
+                      <p>อ่านบทความ</p>
+                    </Link>
+                  </div>
+                  <div className='flex items-center gap-x-2 mt-4'>
+                    <Link
+                      className='hover:scale-110 transition-all duration-300 flex gap-x-2 text-sm items-center text-cornflower-800'
+                      href={item.website}
+                      title={item.title}
+                    >
+                      <Image
+                        src='/images/website.svg'
+                        alt='web-1'
+                        width={20}
+                        height={20}
+                        sizes='100vw'
+                        priority
+                      />
+                      <p>ลองเล่นเลย</p>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
