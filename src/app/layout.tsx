@@ -13,16 +13,16 @@ const prompt = Prompt({
 })
 
 export const metadata: Metadata = {
-  title: 'คำนวณราคาเว็บไซต์กับ Calculator Pro ',
+  title: 'AWS Services - Vultureprime',
   description:
-    ' ถ้าอยากจะพัฒนาเว็บไซต์จะมีค่าใช้จ่าย และ เวลา เท่าไหร่บ้างนะ? มาคำนวณราคาเว็บไซต์กับ Calculator Pro กันเถอะ',
+    'VulturePrime ผู้ให้บริการด้านการพัฒนา และให้คำปรึกษาของ AWS ผ่านผู้เชี่ยวชาญที่ได้รับการรับรองจาก AWS',
   icons: `${APP_URL}/logo.svg`,
   openGraph: {
     type: 'website',
-    title: 'คำนวณราคาเว็บไซต์กับ Calculator Pro ',
+    title: 'AWS Services - Vultureprime',
     description:
-      ' ถ้าอยากจะพัฒนาเว็บไซต์จะมีค่าใช้จ่าย และ เวลา เท่าไหร่บ้างนะ? มาคำนวณราคาเว็บไซต์กับ Calculator Pro กันเถอะ',
-    siteName: 'คำนวณราคาเว็บไซต์กับ Calculator Pro ',
+      'VulturePrime ผู้ให้บริการด้านการพัฒนา และให้คำปรึกษาของ AWS ผ่านผู้เชี่ยวชาญที่ได้รับการรับรองจาก AWS',
+    siteName: 'AWS Services - Vultureprime',
     images: [
       {
         url: `${APP_URL}/images/thumbnail.jpg`,
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@site',
     creator: '@creator',
-    title: 'คำนวณราคาเว็บไซต์กับ Calculator Pro ',
+    title: 'AWS Services - Vultureprime',
     description:
-      ' ถ้าอยากจะพัฒนาเว็บไซต์จะมีค่าใช้จ่าย และ เวลา เท่าไหร่บ้างนะ? มาคำนวณราคาเว็บไซต์กับ Calculator Pro กันเถอะ',
+      'VulturePrime ผู้ให้บริการด้านการพัฒนา และให้คำปรึกษาของ AWS ผ่านผู้เชี่ยวชาญที่ได้รับการรับรองจาก AWS',
     images: `${APP_URL}/images/thumbnail.jpg`,
   },
 }
