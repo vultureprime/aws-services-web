@@ -86,7 +86,7 @@ export default function Home() {
             <m.div
               key={item.id}
               variants={varFade().in}
-              className='flex flex-col gap-y-6 max-w-[178px] mx-auto'
+              className='flex flex-col gap-y-6 max-w-[178px] mx-auto w-full'
             >
               <Image
                 src={item.icon}
