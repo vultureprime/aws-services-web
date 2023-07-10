@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <header
-      className={`fixed top-0 left-0 w-full bg-blue-50/50 backdrop-blur-md shadow-sm `}
+      className={`fixed top-0 left-0 w-full bg-blue-50/50 backdrop-blur-md shadow-sm z-[99] `}
     >
       <div
         className={`z-1 py-3 px-5 max-w-7xl mx-auto w-full flex items-center  gap-x-4`}
