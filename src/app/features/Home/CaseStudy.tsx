@@ -52,7 +52,7 @@ export default function Home() {
               <span className='text-cornflower-500 font-medium'>
                 Vulture Prime The Series
               </span>{' '}
-              <br /> Let's get started with AWS services!
+              <br /> Let&apos;s get started with AWS services!
             </p>
           </div>
         </m.div>
